@@ -82,3 +82,4 @@ let g:javascript_plugin_flow = 1
 
 " IndentLine
 " let g:indentLine_setColors = 0
+let g:vim_json_syntax_conceal = 0
