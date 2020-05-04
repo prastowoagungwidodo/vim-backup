@@ -1,4 +1,6 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhistcnt =2
+let g:netrw_dirhistcnt =4
+let g:netrw_dirhist_4='/Users/ag/Project/react-native/app/src'
+let g:netrw_dirhist_3='/Users/ag/Project/react-native/app'
 let g:netrw_dirhist_2='/Users/ag'
 let g:netrw_dirhist_1='/Users/ag/.vim'
