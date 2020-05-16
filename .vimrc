@@ -1,6 +1,6 @@
 execute pathogen#infect()
 autocmd! GUIEnter * set vb t_vb=
-set guioptions=
+set guioptions+=a
 "indents
 set shiftwidth=2
 set tabstop=2
@@ -8,6 +8,7 @@ set softtabstop=2
 set expandtab
 set autoindent
 set hidden
+set autoread
 
 set splitright
 set completeopt-=preview
@@ -20,7 +21,8 @@ set guifont=Fira\ Code:h12
 syntax on
 
 " Theme
-colorscheme nord
+colorscheme onedark
+hi VertSplit guibg=bg guifg=#444444
 let g:nord_italic = 1
 let g:nord_cursor_line_number_background = 1
 
@@ -58,13 +60,13 @@ let g:NERDTreeIgnore = ['^node_modules$']
 " END NerdTree Configuration
 
 " Vim Airline
-let g:airline_theme='nord'
+let g:airline_theme='minimalist'
 let g:airline_powerline_fonts = 1
 let g:airline#extensions#ale#enabled = 1
 " Enable the list of buffers
-let g:airline#extensions#tabline#enabled = 1
+"let g:airline#extensions#tabline#enabled = 1
 " Show just the filename
-let g:airline#extensions#tabline#fnamemod = ':t'
+"let g:airline#extensions#tabline#fnamemod = ':t'
 " END Vim Airline
 
 
@@ -72,11 +74,13 @@ let g:ale_fixers = {
 \   '*': ['remove_trailing_lines', 'trim_whitespace'],
 \   'javascript': ['eslint'],
 \   'javascript.jsx': ['eslint'],
+\   'php': ['phpcbf'],
 \}
 
 let g:ale_linters = {
 \   'javascript': ['eslint'],
 \   'javascript.jsx': ['eslint'],
+\   'php': ['phpcs'],
 \}
 
 nnoremap  <silent>   <A-tab>  :if &modifiable && !&readonly && &modified <CR> :write<CR> :endif<CR>:bnext<CR>
