@@ -2,7 +2,7 @@
 **How to Install**
 - git clone https://github.com/prastowoagungwidodo/vim-backup ~/.vim
 - cd ~/vim
-- git submodule --init --recursive
+- git submodule update --init --recursive
 - ln -s ~/.vim/.vimrc ~/.vimrc
 
 **Todo**
